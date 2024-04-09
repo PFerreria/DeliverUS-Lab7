@@ -7,9 +7,14 @@ import { Formik } from 'formik'
 import { Image, Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native'
 import * as ExpoImagePicker from 'expo-image-picker'
 import productImage from '../../../assets/product.jpeg'
+import DropDownPicker from 'react-native-dropdown-picker'
 
 export default function CreateProductScreen () {
   const initialPoductValues = { name: null, description: null, price: null, productCategory: null, availability: null }
+
+  const [restaurantCategories, setRestaurantCategories] = useState([])
+
+  const [open, setOpen] = useState(false)
 
   useEffect(() => {
     (async () => {
@@ -68,6 +73,21 @@ export default function CreateProductScreen () {
                 name='availability'
                 label='Shipping costs:'
                 placeholder='Enter the shipping costs of the restaurant'
+              />
+
+              <DropDownPicker
+                open={open}
+                value={values.restaurantCategoryId}
+                items={restaurantCategories}
+                setOpen={setOpen}
+                onSelectItem={ item => {
+                  setFieldValue('restaurantCategoryId', item.value)
+                }}
+                setItems={setRestaurantCategories}
+                placeholder="Select the restaurant category"
+                containerStyle={{ height: 40, marginTop: 20 }}
+                style={{ backgroundColor: GlobalStyles.brandBackground }}
+                dropDownStyle={{ backgroundColor: '#fafafa' }}
               />
 
               <Pressable onPress={() =>
