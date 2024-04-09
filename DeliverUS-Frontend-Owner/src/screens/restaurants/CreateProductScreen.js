@@ -8,6 +8,7 @@ import { Image, Platform, Pressable, ScrollView, StyleSheet, View } from 'react-
 import * as ExpoImagePicker from 'expo-image-picker'
 import productImage from '../../../assets/product.jpeg'
 import DropDownPicker from 'react-native-dropdown-picker'
+import { getProductCategories } from '../../services/productService'
 
 export default function CreateProductScreen () {
   const initialPoductValues = { name: null, description: null, price: null, productCategory: null, availability: null }
