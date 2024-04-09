@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import TextRegular from '../../components/TextRegular'
-import { React, useEffect } from 'react'
+import { React, useEffect, useState } from 'react'
 import InputItem from '../../components/InputItem'
 import * as GlobalStyles from '../../styles/GlobalStyles'
 import { Formik } from 'formik'
@@ -12,7 +12,7 @@ import DropDownPicker from 'react-native-dropdown-picker'
 export default function CreateProductScreen () {
   const initialPoductValues = { name: null, description: null, price: null, productCategory: null, availability: null }
 
-  const [restaurantCategories, setRestaurantCategories] = useState([])
+  const [productCategories, setProductCategories] = useState([])
 
   const [open, setOpen] = useState(false)
 
