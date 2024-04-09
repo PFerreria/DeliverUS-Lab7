@@ -2,62 +2,96 @@
 import React from 'react'
 import TextRegular from '../../components/TextRegular'
 import InputItem from '../../components/InputItem'
-import { View, Pressable, StyleSheet } from 'react-native'
-import GlobalStyles from '../../styles/GlobalStyles'
+import { View, Pressable, StyleSheet, ScrollView } from 'react-native'
+import * as GlobalStyles from '../../styles/GlobalStyles'
 
 export default function CreateRestaurantScreen () {
   return (
-    <View style={{ alignItems: 'center' }}>
-      <View style={{ width: '60%' }}>
-      <InputItem
-        name='sampleInput'
-        label='Sample input'
-      />
-      <InputItem
-        name='sampleInput'
-        label='Sample input'
-      />
-      <InputItem
-        name='sampleInput'
-        label='Sample input'
-      />
-      <InputItem
-        name='sampleInput'
-        label='Sample input'
-      />
-      <InputItem
-        name='sampleInput'
-        label='Sample input'
-      />
-      <InputItem
-        name='sampleInput'
-        label='Sample input'
-      />
-      <InputItem
-        name='sampleInput'
-        label='Sample input'
-      />
-      <InputItem
-        name='sampleInput'
-        label='Sample input'
-      />
-      <Pressable
-        onPress={() => console.log('Button pressed')
-        }
-        style={({ pressed }) => [
-          {
-            backgroundColor: pressed
-              ? GlobalStyles.brandPrimaryTap
-              : GlobalStyles.brandPrimary
-          },
-          styles.button
-        ]}>
-        <TextRegular textStyle={styles.text}>
-          Create restaurant
-        </TextRegular>
-      </Pressable>
+    <ScrollView>
+      <View style={{ alignItems: 'center' }}>
+        <View style={{ width: '60%' }}>
+        <InputItem
+          name='sampleInput'
+          label='Sample input'
+        />
+        <InputItem
+          name='sampleInput'
+          label='Sample input'
+        />
+        <InputItem
+          name='sampleInput'
+          label='Sample input'
+        />
+        <InputItem
+          name='sampleInput'
+          label='Sample input'
+        />
+        <InputItem
+          name='sampleInput'
+          label='Sample input'
+        />
+        <InputItem
+          name='sampleInput'
+          label='Sample input'
+        />
+        <InputItem
+          name='sampleInput'
+          label='Sample input'
+        />
+        <InputItem
+          name='sampleInput'
+          label='Sample input'
+        />
+        <InputItem
+          name='sampleInput'
+          label='Sample input'
+        />
+        <InputItem
+          name='sampleInput'
+          label='Sample input'
+        />
+        <InputItem
+          name='sampleInput'
+          label='Sample input'
+        />
+        <InputItem
+          name='sampleInput'
+          label='Sample input'
+        />
+        <InputItem
+          name='sampleInput'
+          label='Sample input'
+        />
+        <InputItem
+          name='sampleInput'
+          label='Sample input'
+        />
+        <InputItem
+          name='sampleInput'
+          label='Sample input'
+        />
+        <InputItem
+          name='sampleInput'
+          label='Sample input'
+        />
+        <Pressable
+          onPress={() => console.log('Button pressed')
+          }
+          style={({ pressed }) => [
+            {
+              backgroundColor: pressed
+                ? GlobalStyles.brandPrimaryTap
+                : GlobalStyles.brandPrimary
+            },
+            styles.button
+          ]}>
+          <TextRegular textStyle={styles.text}>
+            Create restaurant
+          </TextRegular>
+        </Pressable>
+        </View>
       </View>
-    </View>
+    </ScrollView>
   )
 }
 
